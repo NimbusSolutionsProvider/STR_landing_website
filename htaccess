@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^home$ index.php
+RewriteRule ^([^\.]+)$ $1.php
+ErrorDocument 404 https://dubbudy.in/404
+
+
+RewriteCond %{REQUEST_URI} ^/404$
+RewriteRule ^(.*)$ /404.php [L]
+
