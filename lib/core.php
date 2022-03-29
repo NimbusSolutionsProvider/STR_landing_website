@@ -39,6 +39,7 @@ function uploadImage($files)
             else
             {
                 $uploadedFile="err";
+                echo "Not uploaded because of error #".$_FILES["file"]["error"];
                 return $uploadedFile;
             }
         }
