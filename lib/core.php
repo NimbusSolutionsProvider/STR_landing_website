@@ -41,6 +41,9 @@ function uploadImage($files)
                 $uploadedFile="err";
                 if (!is_writeable($targetPath) ){
                     echo "Cannot write to destination file";
+                 }else
+                 {
+                     echo "write permissions to $targetPath";
                  }
                 echo "Not uploaded because of error #".$_FILES["file"]["error"];
                 return $uploadedFile;
