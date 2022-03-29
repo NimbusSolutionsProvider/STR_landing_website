@@ -39,6 +39,9 @@ function uploadImage($files)
             else
             {
                 $uploadedFile="err";
+                if (!is_writeable($targetPath) ){
+                    die("Cannot write to destination file");
+                 }
                 echo "Not uploaded because of error #".$_FILES["file"]["error"];
                 return $uploadedFile;
             }
