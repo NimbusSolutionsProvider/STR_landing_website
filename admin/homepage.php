@@ -15,7 +15,7 @@ if(isset($_POST['saveChanges'])){
     $mission = $conn->real_escape_string($_POST['mission']);
     $vision = $conn->real_escape_string($_POST['vision']);
     $complaint = $conn->real_escape_string($_POST['complaint']);
-    $sql = "UPDATE webConfig set mainHeading='$mainHeading', subHeading='$subHeading', name='$name' , videoLink='$videoLink' , whatWeDo='$whatWeDo',youtubeLink='$youtubeLink',facebookLink='$facebookLink' , instagramLink='$instagramLink',mission='$mission',vision = '$vision',complaint='$complaint' where id = 1";
+    $sql = "UPDATE webconfig set mainHeading='$mainHeading', subHeading='$subHeading', name='$name' , videoLink='$videoLink' , whatWeDo='$whatWeDo',youtubeLink='$youtubeLink',facebookLink='$facebookLink' , instagramLink='$instagramLink',mission='$mission',vision = '$vision',complaint='$complaint' where id = 1";
     if($conn->query($sql)){
         $updated = 'true';
     }
@@ -28,7 +28,7 @@ if(isset($_POST['addService'])){
     $name = $conn->real_escape_string($_POST['imageAlt']);
     $image =  uploadImage($_FILES);
     if($image!='err'){
-        $sql = "INSERT INTO homepageSlider(imageAlt,image) values('$name','uploads/$image')";
+        $sql = "INSERT INTO homepageslider(imageAlt,image) values('$name','uploads/$image')";
         if($conn->query($sql)){
             $added = 'true';
         }
@@ -48,7 +48,7 @@ if(isset($_POST['deleteSlider'])){
     $path = $conn->real_escape_string($_POST['deletePath'.$id]);
     echo "Deleting $path";
     unlink("../".$path);
-    $sql = "DELETE from homepageSlider where id='$id'";
+    $sql = "DELETE from homepageslider where id='$id'";
     if($conn->query($sql)){
         $updated = 'true';
     }
@@ -58,7 +58,7 @@ if(isset($_POST['deleteSlider'])){
     }
 }
 
-$sql = "SELECT * FROM webConfig where id = 1";
+$sql = "SELECT * FROM webconfig where id = 1";
     if($result = $conn->query($sql)){
         if($result->num_rows > 0){
             $webConfig = $result->fetch_assoc();
@@ -71,7 +71,7 @@ $sql = "SELECT * FROM webConfig where id = 1";
         $error =  $conn->error;
     }
 
-    $sql = "SELECT * FROM homepageSlider";
+    $sql = "SELECT * FROM homepageslider";
     if($result = $conn->query($sql)){
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){

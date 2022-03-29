@@ -13,7 +13,7 @@ require_once 'left_navbar.php';
         $id=$conn->real_escape_string($_POST['editService']);
         $name = $conn->real_escape_string($_POST['nameEdit']);
         $about = $conn->real_escape_string($_POST['aboutEdit']);
-        $sql = "UPDATE whyUs set name='$name',about = '$about'where id= '$id'";
+        $sql = "UPDATE whyus set name='$name',about = '$about'where id= '$id'";
         if($conn->query($sql)){
             $updated= 'true';
         }
@@ -27,7 +27,7 @@ require_once 'left_navbar.php';
         $id = $conn->real_escape_string($_POST['deleteService']);
         $path = $conn->real_escape_string($_POST['deletePath'.$id]);
         unlink("../".$path);
-        $sql = "DELETE FROM whyUs WHERE id= '$id'";
+        $sql = "DELETE FROM whyus WHERE id= '$id'";
         if($conn->query($sql)){
             $updated = 'true';
 
@@ -43,7 +43,7 @@ require_once 'left_navbar.php';
         $image =  uploadImage($_FILES);
         echo $image;
         if($image!='err'){
-            $sql = "INSERT INTO whyUs(name,icon,about) values('$name','uploads/$image','$about')";
+            $sql = "INSERT INTO whyus(name,icon,about) values('$name','uploads/$image','$about')";
             if($conn->query($sql)){
                 $added = 'true';
             }
@@ -59,7 +59,7 @@ require_once 'left_navbar.php';
     }
 
 
-    $sql = "SELECT * FROM whyUs";
+    $sql = "SELECT * FROM whyus";
     if($result = $conn->query($sql)){
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){

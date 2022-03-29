@@ -1,6 +1,6 @@
 <?php
 require_once 'lib/core.php';
-$sql = 'SELECT * FROM webConfig where id = 1';
+$sql = 'SELECT * FROM webconfig where id = 1';
 if ($result = $conn->query($sql)) {
     if ($result->num_rows > 0) {
         $webConfig = $result->fetch_assoc();
@@ -37,7 +37,7 @@ if ($result = $conn->query($sql)) {
     $error = $conn->error;
 }
 
-$sql = 'SELECT * FROM whyUs';
+$sql = 'SELECT * FROM whyus';
 if ($result = $conn->query($sql)) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -50,7 +50,7 @@ if ($result = $conn->query($sql)) {
     $error = $conn->error;
 }
 
-$sql = 'SELECT * FROM homepageSlider';
+$sql = 'SELECT * FROM homepageslider';
 if ($result = $conn->query($sql)) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -63,7 +63,7 @@ if ($result = $conn->query($sql)) {
     $error = $conn->error;
 }
 
-$sql = 'SELECT * FROM pricePlan';
+$sql = 'SELECT * FROM priceplan';
 if ($result = $conn->query($sql)) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {

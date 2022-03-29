@@ -8,7 +8,7 @@ if(isset($_POST['editPlan'])){
     $name = $conn->real_escape_string($_POST['nameEdit']);
     $price = $conn->real_escape_string($_POST['priceEdit']);
     $benefits = $conn->real_escape_string($_POST['benefitsEdit']);
-    $sql = "UPDATE pricePlan SET name = '$name' , price = '$price',benefits='$benefits' WHERE id = '$id'";
+    $sql = "UPDATE priceplan SET name = '$name' , price = '$price',benefits='$benefits' WHERE id = '$id'";
     if($conn->query($sql)){
         $updated='true';
     }
@@ -20,7 +20,7 @@ if(isset($_POST['addPlan'])){
     $name = $conn->real_escape_string($_POST['name']);
     $price = $conn->real_escape_string($_POST['price']);
     $benefits = $conn->real_escape_string($_POST['benefits']);
-    $sql = "INSERT INTO pricePlan( name, price, benefits) VALUES ('$name','$price','$benefits')";
+    $sql = "INSERT INTO priceplan( name, price, benefits) VALUES ('$name','$price','$benefits')";
     if($conn->query($sql)){
         $added='true';
     }
@@ -31,7 +31,7 @@ if(isset($_POST['addPlan'])){
 
 if(isset($_POST['deletePlan'])){
     $id = $_POST['deletePlan'];
-    $sql = "DELETE FROM pricePlan WHERE id = '$id'";
+    $sql = "DELETE FROM priceplan WHERE id = '$id'";
     if($conn->query($sql)){
         $updated = 'true';
     }
@@ -41,7 +41,7 @@ if(isset($_POST['deletePlan'])){
 }
 
 
-$sql = "SELECT * FROM pricePlan";
+$sql = "SELECT * FROM priceplan";
     if($result = $conn->query($sql)){
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
