@@ -11,7 +11,7 @@ date_default_timezone_set('Asia/Kolkata');
 $servername = "d1-srt-mysql-database.cyruinkuaezb.us-east-1.rds.amazonaws.com";
 $username = "d1SrtUser";
 $password = "RkaevaZjaw12we!";
-$dbname = "STRental";
+$dbname = "d1SrtMysqlDatabase";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
