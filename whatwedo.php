@@ -132,7 +132,7 @@ if (isset($_POST['querySubmission'])) {
                 <a href="pricing.php"><li>Pricing</li></a> 
             </ul>
             <div class="navbar-btn"> 
-            <button class="login-btn-navbar" onclick="window.location.href='https://dev.savvy-srt.com/login'">Login</button>
+            <button class="login-btn-navbar" onclick="window.location.href='https://app.savvy-srt.com/login'">Login</button>
                 <button id="myBtn">Request for a Demo</button>
             </div>  
         </div>
