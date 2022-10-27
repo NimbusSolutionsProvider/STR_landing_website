@@ -8,7 +8,7 @@ error_reporting(1);
 date_default_timezone_set('Asia/Kolkata');
 
 //for the database
-$servername = "d1-srt-mysql-database.cyruinkuaezb.us-east-1.rds.amazonaws.com";
+$servername = "d1srtmysqldatabase1.cp5lyqn99dyk.us-east-1.rds.amazonaws.com";
 $username = "d1SrtUser";
 $password = "RkaevaZjaw12we!";
 $dbname = "d1SrtMysqlDatabase";
