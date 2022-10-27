@@ -178,7 +178,7 @@ if (isset($_POST['querySubmission'])) {
                 <a href="pricing.php"><li>Pricing</li></a> 
             </ul>
             <div class="navbar-btn"> 
-            <button class="login-btn-navbar" onclick="window.location.href='https://app.savvy-srt.com/login'">Login</button>
+            <button class="login-btn-navbar" onclick="window.location.href='https://srt-app.nimbussp.com/login'">Login</button>
                 <button class="myBtn">Request for a Demo</button>
             </div>  
         </div>
@@ -191,7 +191,7 @@ if (isset($_POST['querySubmission'])) {
         <p><?= $webConfig['subHeading'] ?></p>
         <div class="header-buttons">
             <div class="header-btn1">
-                <button onclick="window.location.href='https://app.savvy-srt.com/login'">
+                <button onclick="window.location.href='https://srt-app.nimbussp.com/login'">
                     Get Started
                     <img src="assets/Home/nextarrow.png" alt="">
                 </button>
